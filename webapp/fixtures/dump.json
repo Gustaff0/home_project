@@ -1,0 +1,29 @@
+[
+{
+  "model": "webapp.modern",
+  "pk": 3,
+  "fields": {
+    "title": "Починить тачку за 5 сек",
+    "status": "In_progress",
+    "time": "2003-01-23"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$ztPBYV0d6jNL$g5Ere2wnSI2VnlnQZh1P8bkpm4unEAvOUFZ1501zACQ=",
+    "last_login": "2021-02-25T12:03:53.250Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "dgdjkgdjgn@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-02-25T12:03:11.499Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
