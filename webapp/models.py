@@ -5,11 +5,11 @@ from django.db import models
 class Modern(models.Model):
     title = models.TextField(max_length=3000, null=False, blank=False)
     status = models.CharField(max_length=100, null=False, blank=False, default='New')
-    time = models.CharField(max_length=150, null=True, blank=True)
+    time = models.DateField(null=True, blank=True)
 
 
     class Meta:
-        db_table = 'articles'
+        db_table = 'modern'
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
 

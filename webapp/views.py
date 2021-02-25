@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from webapp.models import Modern
 
 # Create your views here.
 
@@ -18,6 +19,8 @@ def modern_create_view(request):
         title = request.POST.get("title")
         status = request.POST.get("status")
         time = request.POST.get("time")
+        if not time:
+            time = None
 
         modern = Modern.objects.create(
             title=title,

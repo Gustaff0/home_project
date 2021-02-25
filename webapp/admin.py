@@ -10,4 +10,4 @@ class ModernAdmin(admin.ModelAdmin):
     fields = ['id', 'title', 'author', 'content']
 
 
-admin.site.register(Article, ArticleAdmin)
+admin.site.register(Modern, ModernAdmin)
