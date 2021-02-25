@@ -6,12 +6,12 @@ def index_view(request):
     modern = Modern.objects.all()
     return render(request, 'index.html', context={'modern': modern})
 
-def article_view(request):
+def modern_view(request):
     modern_id = request.GET.get('id')
     modern = Modern.objects.get(id=modern_id)
     return render(request, 'article_view.html', context={'modern': modern})
 
-def article_create_view(request):
+def modern_create_view(request):
     if request.method == "GET":
         return render(request, 'modern_create.html')
     elif request.method == "POST":
