@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+<h1>Create Article</h1>
+<form action="/articles/add/" method="post">
+    {% csrf_token %}
+    <label>Title:</label><br/>
+    <textarea type="text" name="title"/></textarea><br/>
+    <label>Time:</label><br/>
+    <input name="time"></input><br/>
+    <label>Status:</label><br/>
+     <p><select name="status" required>
+      <option>New</option>
+      <option>In_progress</option>
+      <option>Done</option>
+     </select></p>
+    <br/>
+    <input type="submit" value="Send"/>
+</form>
+</body>
+</html>
