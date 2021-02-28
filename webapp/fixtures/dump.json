@@ -1,27 +1,28 @@
 [
 {
   "model": "webapp.modern",
-  "pk": 3,
+  "pk": 2,
   "fields": {
-    "title": "Починить тачку за 5 сек",
-    "status": "In_progress",
-    "time": "2003-01-23"
+    "title": "Вымать дом",
+    "status": "New",
+    "time": "2021-02-28",
+    "text_f": "Вымать все что движется и не движется"
   }
 },
 {
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$216000$ztPBYV0d6jNL$g5Ere2wnSI2VnlnQZh1P8bkpm4unEAvOUFZ1501zACQ=",
-    "last_login": "2021-02-25T12:03:53.250Z",
+    "password": "pbkdf2_sha256$216000$7xntxkcaiUEc$Dy/1o8ym6n2By/Cf3UbMRzAbOzSxnTvytU+XW1giMLc=",
+    "last_login": "2021-02-28T07:22:54.656Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "",
     "last_name": "",
-    "email": "dgdjkgdjgn@gmail.com",
+    "email": "dsfsfsfs@mail.ru",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2021-02-25T12:03:11.499Z",
+    "date_joined": "2021-02-28T07:22:28.838Z",
     "groups": [],
     "user_permissions": []
   }
