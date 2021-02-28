@@ -9,9 +9,11 @@
 <form action="/modern/add/" method="post">
     {% csrf_token %}
     <label>Title:</label><br/>
-    <textarea type="text" name="title"/></textarea><br/>
+    <textarea type="text" name="title"></textarea><br/>
     <label>Time:</label><br/>
     <input name="time"></input><br/>
+    <label>Full_Description:</label><br/>
+    <textarea type="text" name="text_f"></textarea><br/>
     <label>Status:</label><br/>
      <p><select name="status" required>
       <option>New</option>
