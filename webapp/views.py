@@ -19,13 +19,15 @@ def modern_create_view(request):
         title = request.POST.get("title")
         status = request.POST.get("status")
         time = request.POST.get("time")
+        text_f = request.POST.get("text_f")
         if not time:
             time = None
 
         modern = Modern.objects.create(
             title=title,
             status=status,
-            time=time
+            time=time,
+            text_f=text_f
         )
 
         return render(request, 'modern_view.html', context={'modern': modern})
