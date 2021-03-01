@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_view),
     path('modern/add/', modern_create_view),
-    path('modern/', modern_view)
+    path('modern/<int:pk>/', modern_view)
 ]

@@ -18,7 +18,7 @@
     {% endif %}
 
     {% for modern in moderns %}
-        <p>{{ modern.status }}: <a href="/modern?id={{ modern.id }}">{{ modern.title }}</a></p>
+        <p>{{ modern.status }}: <a href="/modern/{{ modern.pk }}">{{ modern.title }}</a></p>
     {% endfor %}
 
 </div>
