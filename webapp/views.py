@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from webapp.models import Modern
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -30,5 +31,5 @@ def modern_create_view(request):
             text_f=text_f
         )
 
-        return render(request, 'modern_view.html', context={'modern': modern})
+        return HttpResponseRedirect(f'/modern?id={modern.pk}')
 

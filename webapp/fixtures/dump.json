@@ -10,6 +10,26 @@
   }
 },
 {
+  "model": "webapp.modern",
+  "pk": 3,
+  "fields": {
+    "title": "Проиграть весь день в ПК",
+    "status": "New",
+    "time": "2021-02-28",
+    "text_f": "Пройти 1-2-3-4-5-6 уровни"
+  }
+},
+{
+  "model": "webapp.modern",
+  "pk": 4,
+  "fields": {
+    "title": "Апнуть рапиру",
+    "status": "New",
+    "time": "2021-02-28",
+    "text_f": "АПнуть рапиру за 50 дней без лузстрика"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
