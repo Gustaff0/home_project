@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-    <a href="/modern/add">Создать Задачу</a>
+    <a href="{% url 'create' %}">Создать Задачу</a>
     <h1>Articles</h1>
     {% if not moderns %}
         <h2>НЕТ ЗАДАЧ</h2>
