@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from webapp.models import Modern
 from django.http import HttpResponseRedirect, HttpResponseNotFound, Http404
 from django.core.exceptions import ObjectDoesNotExist
+
+
 
 # Create your views here.
 
@@ -36,5 +38,5 @@ def modern_create_view(request, *args, **kwargs):
             text_f=text_f
         )
 
-        return HttpResponseRedirect(f'/modern/{modern.pk}/')
+    return redirect('view', pk=modern.pk)
 

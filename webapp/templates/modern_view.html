@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% block title %}{{ modern.title }}{% endblock %}
+    {% block content %}
     <a href="{% url 'home' %}">view modern list</a>
     <br>
     <br>
@@ -17,5 +20,6 @@
     <p>Time: {{ modern.time }}</p>
     <br>
     <p>Full Description: {{ modern.text_f }}</p>
+    {% endblock %}
 </body>
 </html>
