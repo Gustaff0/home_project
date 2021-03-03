@@ -40,3 +40,15 @@ def modern_create_view(request, *args, **kwargs):
 
     return redirect('view', pk=modern.pk)
 
+def modern_update_view(request, pk):
+    modern = Modern.objects.all(pk=pk)
+    if request.method == 'GET':
+        return render(request, 'update.html', context={'modern': modern})
+    elif request.method == 'POST':
+        modern.title = request.POST.get('title')
+        modern.text_f = request.POST.get('text_f')
+        modern.time = request.POST.get('time')
+        modern.text_f = request.POST.get('text_f')
+        modern.save()
+        return redirect('modern_view', pk=modern.pk)
+
