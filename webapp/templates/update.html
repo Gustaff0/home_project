@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Update Article{% endblock %}
+{% block content %}
+    <h1>Update Article</h1>
+    <form method="POST" action="{% url "modern_update" modern.pk %}">
+        {% csrf_token %}
+        <p><label>Title</label> <input type="text" name="title" value="{{ modern.title }}"></p>
+        <p><label>Time</label> <input name="time" value="{{ modern.time }}"></p>
+        <p><label>Text</label> <textarea name="text_f">{{ modern.text_f }}</textarea></p>
+        <label>Status:</label><br/>
+        <p><select name="status" required>
+          <option>New</option>
+          <option>In_progress</option>
+          <option>Done</option>
+        </select></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    {% block menu %}
+    <li><a href="{% url 'view' modern.pk %}">View</a></li>
+    {% endblock %}
+{% endblock %}

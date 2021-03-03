@@ -20,6 +20,9 @@
     <p>Time: {{ modern.time }}</p>
     <br>
     <p>Full Description: {{ modern.text_f }}</p>
+    {% block menu %}
+    <li><a href="{% url 'modern_update' modern.pk %}">Edit</a></li>
+    {% endblock %}
     {% endblock %}
 </body>
 </html>

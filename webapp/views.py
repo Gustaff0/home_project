@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from webapp.models import Modern
 from django.http import HttpResponseRedirect, HttpResponseNotFound, Http404
 from django.core.exceptions import ObjectDoesNotExist
@@ -41,14 +41,14 @@ def modern_create_view(request, *args, **kwargs):
     return redirect('view', pk=modern.pk)
 
 def modern_update_view(request, pk):
-    modern = Modern.objects.all(pk=pk)
+    modern = get_object_or_404(Modern, pk=pk)
     if request.method == 'GET':
         return render(request, 'update.html', context={'modern': modern})
     elif request.method == 'POST':
         modern.title = request.POST.get('title')
         modern.text_f = request.POST.get('text_f')
         modern.time = request.POST.get('time')
-        modern.text_f = request.POST.get('text_f')
+        modern.status = request.POST.get('status')
         modern.save()
-        return redirect('modern_view', pk=modern.pk)
+        return redirect('view', pk=modern.pk)
 
