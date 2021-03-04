@@ -22,6 +22,7 @@
     {% for modern in moderns %}
         <p>{{ modern.status }}: <a href="{% url 'view' modern.pk %}">{{ modern.title }}</a></p>
         <p><a href="{% url 'modern_update' modern.pk %}">Edit</a></p>
+        <p><a href="{% url 'modern_delete' modern.pk %}">Delete</a></p>
     {% endfor %}
 
 </div>

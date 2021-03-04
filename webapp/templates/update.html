@@ -5,7 +5,7 @@
     <form method="POST" action="{% url "modern_update" modern.pk %}">
         {% csrf_token %}
         <p><label>Title</label> <input type="text" name="title" value="{{ modern.title }}"></p>
-        <p><label>Time</label> <input name="time" value="{{ modern.time }}"></p>
+        <p><label>Time</label> <input name="time" value="{{ modern.time|date:"Y-m-d" }}"></p>
         <p><label>Text</label> <textarea name="text_f">{{ modern.text_f }}</textarea></p>
         <label>Status:</label><br/>
         <p><select name="status" required>

@@ -52,3 +52,12 @@ def modern_update_view(request, pk):
         modern.save()
         return redirect('view', pk=modern.pk)
 
+
+def modern_delete_view(request, pk):
+    modern = get_object_or_404(Modern, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'delete.html', context={'modern': modern})
+    elif request.method == 'POST':
+        modern.delete()
+        return redirect('home')
+

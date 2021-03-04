@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block title %}Delete Modern{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'view' modern.pk %}">View</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Are you sure want to delete modern "{{ modern }}"?</h1>
+    <form method="POST" action="{% url "modern_delete" modern.pk %}" class="text-center">
+        {% csrf_token %}
+        <p><input type="submit" value="Confirm"></p>
+        <p><a href="{% url "view" modern.pk %}">Cancel</a></p>
+    </form>
+{% endblock %}
+</body>
+</html>
